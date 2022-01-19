@@ -33,7 +33,26 @@ html {
 	margin: 0 auto;
 }
 
+section {
+	/*使用padding，而不是margin*/
+	/*是因为想加一些背景颜色，所以需要将颜色框在box的空间之中*/
+	padding: 80px 0;
+}
+
+.box {
+	padding: 1%;
+}
+
 /*---------- HEADINGS ------------*/
+
+h1,
+h2,
+h3 {
+	/*放共有的部分*/
+	font-weight: 300;
+	/*大写*/
+	text-transform: uppercase;
+}
 
 h1 {
 	/*margin: 0;*/
@@ -41,14 +60,57 @@ h1 {
 	margin-top: 0;
 	margin-bottom: 20px;
 	color: #fff;
-	/*是html样式中的字体大小的2倍*/
+	/*是html样式中的字体大小的2.4倍*/
 	font-size: 240%;
 	/*当字体变大时候，要变细一点比较好看*/
-	font-weight: 300;
-	/*大写*/
-	text-transform: uppercase;
-	letter-spacing: 1px;
 	word-spacing: 3px;
+	letter-spacing: 1px;
+}
+
+h2 {
+	/*是html样式中的字体大小的1.8倍*/
+	font-size: 150%;
+	/*当字体变大时候，要变细一点比较好看*/
+	word-spacing: 2px;
+	text-align: center;
+	letter-spacing: 1px;
+}
+
+h3 {
+	font-size: 110%;
+	margin-bottom: 15px;
+}
+
+h2:after {
+	/*在h2下面加了一条橙色的线*/
+	display: block;
+	height: 2px;
+	background-color: #e67e22;
+	content: "";
+	width: 100px; 
+	margin: 0 auto;
+	margin-bottom: 30px;
+}
+
+/*---------- PARAGRAPHS ------------*/
+.long-copy {
+	line-height: 145%;
+	/*长度占row的70%，并且居中*/
+	width: 70%;
+	margin-left: 15%;
+}
+
+.box p {
+	font-size: 90%;
+	line-height: 145%;
+}
+
+/*---------- ICONS ------------*/
+.icon-big {
+	font-size: 350%;
+	display: block;
+	color: #e67e22;
+	margin-bottom: 10px;
 }
 
 /*---------- BUTTONS ------------*/
