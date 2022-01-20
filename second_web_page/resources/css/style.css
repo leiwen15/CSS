@@ -232,3 +232,57 @@ header {
 	border-bottom: 2px solid #e67e22;
 }
 
+/*--------------------------------*/
+/* FEATURES */
+/*--------------------------------*/
+
+.section-features .long-copy {
+	margin-bottom: 30px;
+}
+
+
+/*--------------------------------*/
+/* MEALS */
+/*--------------------------------*/
+
+.section-meals {
+	padding: 0;
+}
+
+.meals-showcase {
+	list-style: none;
+	width: 100%;
+}
+
+.meals-showcase li {
+	display: block;
+	float: left;
+	width: 25%;
+	/*margin: 100px 100px;*/
+}
+
+.meal-photo {
+	/*相对于父节点，也就是li*/
+	width: 100%;
+	overflow: hidden;
+	background-color: #000;
+}
+
+.meal-photo img {
+	/*设置透明度为70%*/
+	/**/
+	opacity: 0.7;
+	width: 100%;
+	height: auto;
+	/*把图片变为原来的1.15倍大*/
+	transform: scale(1.15);
+	/*整个过程花费0.5s*/
+	/*让图片一边变小，一边变亮*/
+	transition: transform 0.5s, opacity 0.5s;
+}
+
+.meal-photo img:hover {
+	/*当鼠标悬浮在上面时*/
+	opacity: 1;
+	transform: scale(1);
+}
