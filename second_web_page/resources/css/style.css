@@ -2,8 +2,6 @@
 /* BASIC SETUP*/
 /*--------------------------------*/
 
-
-
 * {
 	margin: 0;
 	padding: 0;
@@ -18,6 +16,18 @@ html {
 	font-weight: 300;
 	text-rendering: optimizeLegibility;
 }
+
+/*浮动的元素，高度为0*/
+/*为了清除浮动*/
+.clearfix {zoom: 1}
+.clearfix:after {
+	content: '.';
+	clear: both;
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+
 
 /*--------------------------------*/
 /* REUSABLE COMPONENTS */
@@ -74,6 +84,7 @@ h2 {
 	word-spacing: 2px;
 	text-align: center;
 	letter-spacing: 1px;
+	margin-bottom: 30px;
 }
 
 h3 {
@@ -285,4 +296,65 @@ header {
 	/*当鼠标悬浮在上面时*/
 	opacity: 1;
 	transform: scale(1);
+}
+
+/*--------------------------------*/
+/* HOW IT WORKS */
+/*--------------------------------*/
+
+/*将这一小块的背景色变成灰色*/
+.section-steps {
+	background-color: #f4f4f4;
+}
+
+.steps-box:first-child {
+	/*可以对所有的inline inline-block生效，包括img是inline-block*/
+	text-align: right;
+	padding-right: 3%;
+	margin-top: 30px;
+}
+
+.steps-box:last-child {
+	padding-left: 3%;
+	margin-top: 70px;
+}
+
+.app-screen {
+	width: 40%;
+}
+
+.works-step {
+	margin-bottom: 50px;
+}
+
+/*类似于last-child*/
+/*让下面的图标更靠下*/
+.works-step:last-of-type {
+	margin-bottom: 80px;
+}
+
+.works-step div {
+	/*字体变为橙色*/
+	color: #e67e22;
+	/*边框*/
+	border: 2px solid #e67e22;
+	/*使用inline-block，border就不会变得那么长*/
+	display: inline-block;
+	/*让边框变为圆的，不仅50%，还需要宽和高一致*/
+	border-radius: 50%;
+	height: 50px;
+	width: 50px;
+	text-align: center;
+	padding: 5px;
+	/*用了此行，下方的字母便挪到了边框右边*/
+	float: left;
+	margin-right: 25px;
+	font-size: 150%;
+}
+
+.btn-app img {
+	height: 50px;
+	width: auto;
+	margin-right: 10px;
+
 }
