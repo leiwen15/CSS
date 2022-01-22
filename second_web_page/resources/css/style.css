@@ -276,6 +276,8 @@ header {
 	/*相对于父节点，也就是li*/
 	width: 100%;
 	overflow: hidden;
+	/*由于引入的别的css中，figure有margin的定义，因此要在此处去掉*/
+	margin: 0;
 	background-color: #000;
 }
 
