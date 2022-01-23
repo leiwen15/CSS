@@ -79,7 +79,7 @@ h1 {
 
 h2 {
 	/*是html样式中的字体大小的1.8倍*/
-	font-size: 150%;
+	font-size: 180%;
 	/*当字体变大时候，要变细一点比较好看*/
 	word-spacing: 2px;
 	text-align: center;
@@ -92,15 +92,16 @@ h3 {
 	margin-bottom: 15px;
 }
 
+
 h2:after {
 	/*在h2下面加了一条橙色的线*/
 	display: block;
 	height: 2px;
 	background-color: #e67e22;
-	content: "";
-	width: 100px; 
+	content: " ";
+	width: 100px;
 	margin: 0 auto;
-	margin-bottom: 30px;
+	margin-top: 30px;
 }
 
 /*---------- PARAGRAPHS ------------*/
@@ -122,6 +123,37 @@ h2:after {
 	display: block;
 	color: #e67e22;
 	margin-bottom: 10px;
+}
+
+.icon-small {
+	display: inline-block;
+	width: 30px;
+	text-align: center;
+	color: #e67e22;
+	margin-right: 10px;
+
+	/*icon就有点像字体*/
+	font-size: 120%;
+	inline-height: 120%;
+	vertical-align: middle;
+	margin-top: -5px;
+
+}
+
+/*---------- LINKS ------------*/
+a:link,
+a:visited {
+	color: #e67e22;
+	text-decoration: none;
+	padding-bottom: 1px;
+	border-bottom: 1px solid #e67e22;
+	transition: border-bottom 0.2s, color 0.2s;
+}
+
+a:hover,
+a:active {
+	color: #555;
+	border-bottom: 1px solid transparent;
 }
 
 /*---------- BUTTONS ------------*/
@@ -194,6 +226,7 @@ header {
 	/*100% of the viewport*/
 	/*让整张背景图显示出来，否则只显示content部分*/
 	height: 100vh;
+	background-attachment: fixed;
 }
 
 .hero-text-box {
@@ -354,9 +387,77 @@ header {
 	font-size: 150%;
 }
 
+.btn-app:link,
+.btn-app:visited {
+	border: 0;
+}
+
 .btn-app img {
 	height: 50px;
 	width: auto;
 	margin-right: 10px;
 
 }
+
+/*--------------------------------*/
+/* CITIES */
+/*--------------------------------*/
+
+.box img {
+	width: 100%;
+	height: auto;
+}
+
+.city-feature {
+	margin: 5px;
+}
+
+/*--------------------------------*/
+/* TESTIMONIALS */
+/*--------------------------------*/
+
+.section-tesiomnials {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)),url(img/back-customers.jpg);
+	background-size: cover;
+	/*字体变成白色*/
+	color: #fff;
+	/*好像图片一直不动，动的只有上面的东西*/
+	background-attachment: fixed;
+}
+
+blockquote {
+	padding: 2%;
+	font-style: italic;
+	font-weight: 200;
+	position: relative;
+	margin-top: 40px;
+}
+
+blockquote:before {
+	content: "\201C";
+	font-size: 300%;
+	display:block;
+	/*绝对的父节点应该是relative*/
+	position: absolute;
+	top: -25px;
+	left: -25px;
+}
+
+cite {
+	font-size: 90%;
+	margin-top: 20px;
+	display: block;
+}
+
+cite img {
+	height: 45px;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+
+
+
+
+
+
