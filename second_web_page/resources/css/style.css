@@ -162,7 +162,8 @@ a:active {
 /*link visited active hover*/
 /*link是正常状态*/
 .btn:link,
-.btn:visited {
+.btn:visited,
+input[type=submit]{
 	/*a标签本来是inline的，但此处将其修改为inline-block*/
 	/*inline-block可以定义padding*/
 	display: inline-block;
@@ -176,14 +177,19 @@ a:active {
 }
 
 .btn:hover,
-.btn:active {
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
 	background-color: #cf6d17;
 }
 
 .btn-full:link,
-.btn-full:visited {
+.btn-full:visited,
+input[type=submit] {
 	background-color: #e67e22;
 	border: 1px solid #e67e22;
+	color: #fff;
+	margin-right: 15px;
 }
 
 .btn-ghost:link,
@@ -514,4 +520,32 @@ cite img {
 	padding: 5px 0;
 }
 
+/*--------------------------------*/
+/* FORM */
+/*--------------------------------*/
 
+.contact-form {
+	width: 60%;
+	/*将会其总父节点那里居中*/
+	margin: 0 auto;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+	width: 100%;
+	padding: 7px;
+	border-radius: 3px;
+	border: 1px solid #ccc;
+}
+
+textarea {
+	height: 100px;
+}
+
+input[type=checkbox] {
+	margin: 10px 5px 10px 0;
+}
+
+*:focus {outline:none}
